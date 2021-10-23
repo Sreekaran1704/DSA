@@ -1,35 +1,19 @@
-class Node:
-	def __init__(self, data):
-		self.data = data # Assign data
-		self.next = None # Initialize next as null
-
-
-class LinkedList:
-
-	# Function to initialize head
+class node:
+	def __init__(self,value=None,next=None):
+		self.value=value
+		self.next=next
+class SlinkedList:
 	def __init__(self):
-		self.head = None
+		self.head=None
+	def createList(self):
+		for i in range(int(input("Enter the size of Linked List : "))):
+			data=int(input())
+			newnode=node(data)
+			if self.head==None:
+				self.head=newnode
+			else:
+				temp=self.head
+				while(temp.next!=None):
+					temp=temp.next
+				temp.next=newnode
 
-	# This function prints contents of linked list
-	# starting from head
-	def printList(self):
-		temp = self.head
-		while (temp):
-			print (temp.data)
-			temp = temp.next
-
-
-# Code execution starts here
-if __name__=='__main__':
-
-	# Start with the empty list
-	llist = LinkedList()
-
-	llist.head = Node(1)
-	second = Node(2)
-	third = Node(3)
-
-	llist.head.next = second; # Link first node with second
-	second.next = third; # Link second node with the third node
-
-	llist.printList()
