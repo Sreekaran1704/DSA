@@ -6,7 +6,8 @@ class SlinkedList:
 	def __init__(self):
 		self.head=None
 	def createList(self):
-		for i in range(int(input("Enter the size of Linked List : "))):
+		n=int(input("Enter the size of Linked List : "))
+		for i in range(n):
 			data=int(input())
 			newnode=node(data)
 			if self.head==None:
@@ -16,4 +17,7 @@ class SlinkedList:
 				while(temp.next!=None):
 					temp=temp.next
 				temp.next=newnode
+	def printList(self):
+		for i in range(self.n):
+			print()
 
