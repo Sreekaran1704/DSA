@@ -25,7 +25,7 @@ public:
 	}
 };
 
-// { Driver Code Starts.
+// Driver Code Starts.
 int main(){
 	int tc;
 	cin >> tc;
@@ -43,8 +43,6 @@ int main(){
     		adj[u].push_back(v);
     // 		adj[v].push_back(u); // uncomment this for undirected graoh 
     	}
-        // string s1;
-        // cin>>s1;
         Solution obj;
         vector<int>ans=obj.bfsOfGraph(V, adj);
         for(int i=0;i<ans.size();i++){
