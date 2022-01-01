@@ -14,22 +14,19 @@ def mergesort(arr):
                 arr[k]=R[j]
                 j+=1
             k+=1
+
         while i<len(L):
             arr[k]=L[i]
             i+=1
             k+=1
+        
         while j<len(R):
             arr[k]=R[j]
             j+=1
             k+=1
-def printarray(arr):
-    for i in arr:
-        print(i,end=" ")
-    print()
 
-
-n=list(map(int,input("Enter the List : ").split()))
-printarray(n)
-mergesort(n)
+arr=list(map(int,input().split()))
+print(arr)
 print("After sorting : ")
-printarray(n)
+mergesort(arr)
+print(arr)
